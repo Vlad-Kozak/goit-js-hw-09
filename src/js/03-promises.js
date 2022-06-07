@@ -9,7 +9,7 @@ function onSubmitForm(e) {
   const { delay, step, amount } = form;
 
   setTimeout(() => {
-    for (i = 0; i < amount.value; i += 1) {
+    for (let i = 0; i < amount.value; i += 1) {
       createPromise(i + 1, step.value * i)
         .then(({ position, delay }) =>
           Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`)
